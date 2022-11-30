@@ -16,8 +16,8 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.use("https://average-tank-top-moth.cyclic.app/api/user", userRoutes);
-app.use("https://average-tank-top-moth.cyclic.app/api/user/api/game", gameRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/user/api/game", gameRoutes);
 
 mongoose.connect(process.env.ATLAS_URI)
     .then(() => {
