@@ -2,11 +2,16 @@ require("dotenv").config({ path: "./config.env" });
 
 const { application } = require("express");
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/user")
 const gameRoutes = require("./routes/game")
 
 const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 app.use(express.json());
 
