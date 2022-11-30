@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
 //routes
 app.use("/api/user", userRoutes);
-app.use("/api/user/api/game", gameRoutes);
+app.use("/api/game", gameRoutes);
 
 mongoose.connect(process.env.ATLAS_URI)
     .then(() => {
