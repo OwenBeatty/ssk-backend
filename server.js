@@ -10,7 +10,7 @@ const gameRoutes = require("./routes/game")
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://ssk-frontend-iota.vercel.app/"]
+    origin: ["http://localhost:3000", "https://ssk-frontend-iota.vercel.app"]
 }));
 
 app.use(express.json());
