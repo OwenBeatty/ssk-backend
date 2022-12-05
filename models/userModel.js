@@ -21,7 +21,7 @@ userSchema.statics.signup = async function(username, password) {
     if (!username || !password) {
         throw Error("All fields required");
     }
-    if (!validator.isStrongPassword(password)) {
+    if (!validator.isStrongPassword(password, {minSymbols: 0})) {
         throw Error("Stronger password required");
     }
 
